@@ -99,7 +99,6 @@ clearBtn.onclick = () => {
     pendingVal = undefined;
     evalStringArray = [];
     displayValElement.innerHTML = displayVal;
-    historyBox.innerHTML = '';
     historyStringArray = '';
 }
 
