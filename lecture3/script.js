@@ -10,7 +10,7 @@ var tools = (function(){
         },
 
         checkNaN: function (a) {
-            return isNaN(a);
+            return a != a;
         },
 
         checkEmptyObject: function (obj) {
