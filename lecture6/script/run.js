@@ -1,5 +1,5 @@
-function start (project) {
-    var manager;
+let start = (project) => {
+    let manager;
     switch (project.lvl) {
         case "easy":
             manager = workers.managers.rare.pop();
@@ -16,19 +16,19 @@ function start (project) {
         return;
         
     } 
-    var juniorsOnProject = document.querySelector("#junior-number-on-project").value;
-    var middlesOnProject = document.querySelector("#middle-number-on-project").value;
-    var seniorsOnProject = document.querySelector("#senior-number-on-project").value;
+    let juniorsOnProject = document.querySelector("#junior-number-on-project").value;
+    let middlesOnProject = document.querySelector("#middle-number-on-project").value;
+    let seniorsOnProject = document.querySelector("#senior-number-on-project").value;
     
-    var budget = document.querySelector("#budget");
-    var count = juniorsOnProject * 1000 + middlesOnProject * 3000 + seniorsOnProject * 10000;
+    let budget = document.querySelector("#budget");
+    let count = juniorsOnProject * 1000 + middlesOnProject * 3000 + seniorsOnProject * 10000;
     count *= manager.multiplier;
-    var allSalarySize = juniorsOnProject * 200 + middlesOnProject * 800 + seniorsOnProject * 2000;
+    let allSalarySize = juniorsOnProject * 200 + middlesOnProject * 800 + seniorsOnProject * 2000;
     if (((workers.developers.juniors.length - juniorsOnProject) >= 0) && ((workers.developers.middles.length - middlesOnProject) >= 0) && ((workers.developers.seniors.length - seniorsOnProject) >= 0)) {
         
-        var div = document.createElement("div");
+        let div = document.createElement("div");
     
-        var timerId = setInterval(function() {
+        let timerId = setInterval(() => {
             project.linesCount -= count;
             div.innerHTML = "<p>Проект в процессе</p> <p>Осталось строк:</p>" + project.linesCount;
             document.body.appendChild(div);

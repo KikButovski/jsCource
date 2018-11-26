@@ -1,52 +1,52 @@
-var handlers = (function() {
+const handlers = (() => {
     return {
-        addDeveloper: function() {
-            document.querySelector("#add-junior").onclick = function () {
+        addDeveloper() {
+            document.querySelector("#add-junior").onclick = () => {
                 workers.developers.juniors.push(new Developer("junior"));
                 document.querySelector("#juniors-cound").innerText = workers.developers.juniors.length;
             }
             
-            document.querySelector("#add-middle").onclick = function () {
+            document.querySelector("#add-middle").onclick = () => {
                 workers.developers.middles.push(new Developer("middle"));
                 document.querySelector("#middles-cound").innerText = workers.developers.middles.length;
             
             }
             
-            document.querySelector("#add-senior").onclick = function () {
+            document.querySelector("#add-senior").onclick = () => {
                 workers.developers.seniors.push(new Developer("senior"));
                 document.querySelector("#seniors-cound").innerText = workers.developers.seniors.length;
             }
 
         },
 
-        addManager: function() {
-            document.querySelector("#add-rare-manager").onclick = function () {
+        addManager() {
+            document.querySelector("#add-rare-manager").onclick = () => {
                 workers.managers.rare.push(new Manager("rare"));
                 document.querySelector("#rare-cound").innerText = workers.managers.rare.length;
             }
             
-            document.querySelector("#add-epic-manager").onclick = function () {
+            document.querySelector("#add-epic-manager").onclick = () => {
                 workers.managers.epic.push(new Manager("epic"));
                 document.querySelector("#epic-cound").innerText = workers.managers.epic.length;
             }
             
-            document.querySelector("#add-legendary-manager").onclick = function () {
+            document.querySelector("#add-legendary-manager").onclick = () => {
                 workers.managers.legendary.push(new Manager("legendary"));
                 document.querySelector("#legendary-cound").innerText = workers.managers.legendary.length;
             }
         },
 
-        addProject: function() {
+        addProject() {
     
-            document.querySelector("#easy").onclick = function() {
+            document.querySelector("#easy").onclick = () => {
                 start(new Project("easy"))
             }
             
-            document.querySelector("#normal").onclick = function() {
+            document.querySelector("#normal").onclick = () => {
                 start(new Project("normal"))
             }
             
-            document.querySelector("#hard").onclick = function() {
+            document.querySelector("#hard").onclick = () => {
                 start(new Project("hard"))
             }
           

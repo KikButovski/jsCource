@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = () => {
     handlers.addDeveloper();
     handlers.addManager();
     handlers.addProject(); 

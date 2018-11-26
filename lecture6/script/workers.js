@@ -1,4 +1,4 @@
-var workers = (function() {
+var workers = (() => {
     return {
         developers: {
             juniors:[],
